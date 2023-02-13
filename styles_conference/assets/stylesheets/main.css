@@ -49,6 +49,18 @@ table {
 
 /*
   ========================================
+  Custom styles
+  ========================================
+*/
+
+body {
+  background: #293f50;
+  color: #888;
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+  ========================================
   Grid
   ========================================
 */
@@ -62,12 +74,12 @@ table {
 }
 .container,
 .grid {
-	margin: 0 auto;
-	width: 960px;
+  margin: 0 auto;
+  width: 960px;
 }
 .container {
   padding-left: 30px;
-	padding-right: 30px;
+  padding-right: 30px;
 }
 .grid,
 .col-1-3,
@@ -76,7 +88,7 @@ table {
   padding-right: 15px;
 }
 .col-1-3,
-.col-2-3 {
+.col-2-3  {
   display: inline-block;
   vertical-align: top;
 }
@@ -92,6 +104,7 @@ table {
   Clearfix
   ========================================
 */
+
 .group:before,
 .group:after {
   content: "";
@@ -112,7 +125,7 @@ table {
 */
 
 .row,
-.row-alt{
+.row-alt {
   min-width: 960px;
 }
 .row {
@@ -120,12 +133,12 @@ table {
   padding: 66px 0 44px 0;
 }
 .row-alt {
-   background: #cbe2c1;
-   background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
-   background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
-   background: linear-gradient(to right, #a1d3b0, #f6f1d3);
-   padding: 44px 0 22px 0;
- }
+  background: #cbe2c1;
+  background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background:    -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background:         linear-gradient(to right, #a1d3b0, #f6f1d3);
+  padding: 44px 0 22px 0;
+}
 
 /*
   ========================================
@@ -167,10 +180,43 @@ em {
   font-style: italic;
 }
 
-body {
-  background: #293f50;
-  color: #888;
-  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/*
+  ========================================
+  Leads
+  ========================================
+*/
+
+.lead {
+  text-align: center;
+}
+.lead p {
+  font-size: 21px;
+  line-height: 33px;
+}
+
+/*
+  ========================================
+  Links
+  ========================================
+*/
+
+a {
+  color: #648880;
+  text-decoration: none;
+}
+a:hover {
+  color: #a9b2b9;
+}
+p a {
+  border-bottom: 1px solid #dfe2e5;
+}
+.primary-header a,
+.primary-footer a {
+  color: #fff;
+}
+.primary-header a:hover,
+.primary-footer a:hover {
+  color: #648880;
 }
 
 /*
@@ -190,10 +236,9 @@ body {
   text-transform: uppercase;
 }
 .btn-alt {
-  border: 1px solid #dfe2e5;
+  border: 1px solid #fff;
   padding: 10px 30px;
 }
-
 .btn-alt:hover {
   background: #fff;
   color: #648880;
@@ -215,26 +260,15 @@ body {
   padding: 40px 0 22px 0;
   text-transform: uppercase;
 }
-
+.tagline {
+  margin: 66px 0 22px 0;
+  text-align: right;
+}
 .primary-nav {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: .5px;
   text-transform: uppercase;
-}
-
-.tagline {
-  margin: 66px 0 22px 0;
-  text-align: right;
-}
-
-.primary-header a,
-.primary-footer a {
-  color: #fff;
-}
-.primary-header a:hover,
-.primary-footer a:hover {
-  color: #648880;
 }
 
 /*
@@ -243,18 +277,33 @@ body {
   ========================================
 */
 
-.primary-footer small {
-  float: left;
-}
-
 .primary-footer {
+  color: #648880;
+  font-size: 14px;
   padding-bottom: 44px;
   padding-top: 44px;
 }
-section {
+.primary-footer small {
+  float: left;
+  font-weight: 400;
+}
+
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+
+.nav {
+  text-align: right;
+}
+.nav li {
   display: inline-block;
-  margin: 0 1.5%;
-  width: 30%;
+  margin: 0 10px;
+  vertical-align: top;
+}
+.nav li:last-child {
+  margin-right: 0;
 }
 
 /*
@@ -269,34 +318,6 @@ section {
   padding: 22px 80px 66px 80px;
   text-align: center;
 }
-
-a {
-  color: #648880;
-  text-decoration: none;
-}
-a:hover {
-  color: #a9b2b9;
-}
-p a {
-  border-bottom: 1px solid #dfe2e5;
-}
-
-/*
-  ========================================
-  Navigation
-  ========================================
-*/
-
-.nav {
-  text-align: right;
-}
-
-.hero {
-  line-height: 44px;
-  padding: 22px 80px 66px 80px;
-  text-align: center;
-}
-
 .hero h2 {
   font-size: 36px;
 }
@@ -304,7 +325,23 @@ p a {
   font-size: 24px;
   font-weight: 100;
 }
-
 .teaser a:hover h3 {
   color: #a9b2b9;
+}
+
+/*
+  ========================================
+  Speakers
+  ========================================
+*/
+
+.speaker {
+  margin-bottom: 44px;
+}
+.speaker-info {
+  border: 1px solid #dfe2e5;
+  border-radius: 5px;
+  margin-top: 88px;
+  padding: 22px 0;
+  text-align: center;
 }
