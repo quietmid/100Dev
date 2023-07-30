@@ -23,8 +23,42 @@ console.log(findSum(arr));
 //Create a function that takes in an array of numbers
 //Return a new array of numbers that is every original number squared
 
+let array = [3,5,7,9]
+
+function numSquared(array){
+
+return array.map(n => n*n)
+
+}
+
+console.log(numSquared(array))
+
 //Create a function that takes string
 //Print the reverse of that string to the console
 
+let string = "stylesheet";
+
+
+function reverseString(string){
+    return string.split('').reverse().join('');
+}
+
+console.log(reverseString(string));
+
+
 //Create a function that takes in a string
 //Alert if the string is a palindrome or not
+
+
+let str = 'book'
+
+function palindromeOrNot(str) {
+
+    if(str === str.split('').reverse().join('')){
+        return true
+    }else{
+        return false
+    }
+};
+
+alert(palindromeOrNot(str));
